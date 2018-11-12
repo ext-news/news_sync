@@ -44,7 +44,9 @@ class SyncImagesCommand extends Command
     {
         $filePath = 'content' . $sysFileRow['identifier'];
         $localFilePath = PATH_site . $filePath;
-        $remoteFilePath = 'http://www.diamond-air.at/' . $filePath;
+        $domain = '';
+        die('no domain yet set, not currently configurable, do it in SyncImagesCommand, sorry');
+        $remoteFilePath = $domain . $filePath;
         if (is_file($localFilePath)) {
             return;
         }
